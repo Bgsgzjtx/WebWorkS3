@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>手工书皮制作工作坊 · Handmade Book Cover</title>
+<style>
+
+/* ===== .page 样式：除背景色改为天空浅蓝 #E6F3FF 外，其余声明按要求原样保留 ===== */
+.page {
+display: inline-block;
+background-color: #E6F3FF;
+box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+text-align: left;
+max-width: 720px;
+}
+
+body {
+background-color: #D3E7FB;
+color: #35506b;
+font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+margin: 0;
+padding: 32px 16px;
+text-align: center;
+}
+
+/* ===== ③ 并集选择器 h1, h2, h3, h4, h5, h6 ===== */
+h1, h2, h3, h4, h5, h6 {
+color: #1f5c8b;
+font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+margin: 0 0 14px 0;
+}
+
+h1 { font-size: 30px; letter-spacing: 2px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+
+/* 五个区域的内部版式（不改动 .page 原有声明） */
+.header { padding: 30px 36px 20px; border-bottom: 2px solid #b6d7f2; text-align: center; }
+.intro  { padding: 22px 36px 8px; }
+.signup { padding: 12px 36px 18px; }
+.links  { padding: 18px 36px; text-align: center; }
+.notice { padding: 18px 36px 30px; border-top: 2px dashed #b6d7f2; background-color: #F3F9FF; }
+
+p {
+font-size: 15px;
+line-height: 1.9;
+margin: 0 0 12px 0;
+text-indent: 2em;
+}
+
+/* ===== ⑥ 伪元素 p::first-letter 与 div::first-line ===== */
+p::first-letter {
+font-size: 1.7em;
+font-weight: bold;
+color: #d9762f;
+}
+div::first-line {
+color: #2b6ca3;
+}
+
+/* ===== ④ ID 选择器 p#intro：重要提示需强调（放大 / 加粗 / 特殊颜色） ===== */
+p#intro {
+font-size: 19px;
+font-weight: bold;
+color: #b4531c;
+background-color: #FFF1DC;
+border-left: 5px solid #E9A23B;
+text-indent: 0;
+padding: 12px 16px;
+}
+
+/* 表格 */
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 10px 0 4px 0;
+background-color: #FFFFFF;
+}
+th {
+background-color: #CDE6FF;
+color: #1f5c8b;
+border: 1px solid #9CC4E8;
+padding: 10px 8px;
+font-size: 15px;
+}
+td {
+border: 1px solid #C9DFF2;
+padding: 9px 8px;
+font-size: 14px;
+line-height: 1.6;
+}
+
+/* ===== ① 后代选择器：仅当 div 里的 table 里有超级链接时才触发 ===== */
+div table a {
+background-color: #E7F7F0;
+border-bottom: 2px dotted #4E9C86;
+font-weight: bold;
+padding: 2px 4px;
+}
+
+/* ===== ② 链接伪类 a:link, a:visited, a:hover, a:active ===== */
+a:link    { color: #1a6fb5; text-decoration: none; }
+a:visited { color: #7a5bb0; }
+a:hover   { text-decoration: underline; letter-spacing: 1px; background-color: #FFF3D6; }
+a:active  { color: #c0341d; background-color: #FFE2B8; }
+
+/* ===== ⑤ 带类名的链接 a.red 与 a.blue ===== */
+a.red {
+color: #c0392b;
+border: 1px solid #E7B9AF;
+font-weight: bold;
+padding: 8px 16px;
+margin: 0 10px;
+}
+a.blue {
+color: #1f5fa8;
+border: 1px solid #B4D0EE;
+font-weight: bold;
+padding: 8px 16px;
+margin: 0 10px;
+}
+
+.notice p { font-size: 14px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<div class=page>
+
+  <!-- ① 顶部标题区 -->
+  <div class="header">
+    <h1>手工书皮制作工作坊 · Handmade Book Cover</h1>
+  </div>
+
+  <!-- ② 活动介绍区 -->
+  <div class="intro">
+    <h2 id="intro">把一本书，包成只属于你的样子</h2>
+    <p>手作的意义，是把时间慢慢缝进一张纸里。Handmade Book Cover 工作坊邀请你暂时放下屏幕，用一张纸、一块布、一根蜡线，为心爱的书做一件合身的外衣。这里没有标准答案，只有 craft 带来的专注与惊喜：从选纸、裁切、折边到 hand-stitch 缝线，每一步都由你亲手完成，每一道折痕都是 handmade 的印记。</p>
+    <p>工作坊由校图书馆阅读推广社与手工社联合举办，现场备有牛皮纸、花纹纸、素色棉麻布与蜡线，也欢迎你带来旧日历、包装纸或一小块旧衣布料，让旧物在书脊上重新发芽。零基础也能轻松上手，指导同学会带着大家完成测量、压痕、包角与装订，两小时后，你就能带着一本独一无二的 DIY 书皮回家。</p>
+    <p id="intro">重要提示：本场工作坊限 24 人，需提前报名；请自带一本想包起来的平装书（厚度不超过 2 厘米），剪刀、白乳胶与骨刀由工作台统一提供，请勿自带尖锐刀具。</p>
+  </div>
+
+  <!-- ③ 活动报名信息表格区 -->
+  <div class="signup">
+    <h3>工作坊材料清单与报名信息</h3>
+    <table>
+      <tr>
+        <th>材料名称</th>
+        <th>规格 / 用途</th>
+        <th>建议数量</th>
+        <th>备注</th>
+      </tr>
+      <tr>
+        <td>手工包皮纸（牛皮纸 / 花纹纸）</td>
+        <td>A4 加大，120g 以上，耐折</td>
+        <td>每人 2 张</td>
+        <td>可自带旧包装纸，<a href="https://hongchenwusdnu.github.io/bookstore/job4.html">参考图样</a></td>
+      </tr>
+      <tr>
+        <td>素色棉麻布</td>
+        <td>25cm × 35cm，用于书脊加固</td>
+        <td>每人 1 块</td>
+        <td>建议先水洗晾干</td>
+      </tr>
+      <tr>
+        <td>蜡线 / 麻绳</td>
+        <td>1.5mm，米白或原色，缝线装订</td>
+        <td>每人 1 卷</td>
+        <td><a href="https://hongchenwusdnu.github.io/bookstore/job4.html">缝法示例</a></td>
+      </tr>
+      <tr>
+        <td>白乳胶（无酸手工胶）</td>
+        <td>粘贴书脊与折边</td>
+        <td>每组 1 瓶</td>
+        <td>工作台统一发放</td>
+      </tr>
+      <tr>
+        <td>骨刀 / 压线板</td>
+        <td>压出平整折痕</td>
+        <td>每组 2 把</td>
+        <td>现场借用，请勿带走</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ④ 页面链接区 -->
+  <div class="links">
+    <div>
+      <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a>
+      <a class="blue" href="ding--0223--work2.html">在线咨询活动详情</a>
+    </div>
+  </div>
+
+  <!-- ⑤ 底部公告区 -->
+  <div class="notice">
+    <p>活动时间：2026 年 12 月 5 日（周六）14:00—17:00<br>活动地点：校图书馆三楼 · 手工研习室（靠窗第二间）</p>
+    <p>报名方式：在图书馆一楼服务台填写纸质报名表，或点击上方「在线咨询活动详情」留言<br>报名截止：12 月 2 日 18:00，名额 24 人，报满即止</p>
+    <p>温馨提醒：请提前十分钟到场选纸，工作坊全程不使用大型器械，建议穿着方便活动的衣物<br>成品可自行带走，优秀作品将在月末「手作书影」小展中展出，欢迎带上你的 craft 故事一起来。</p>
+  </div>
+
+</div>
+
+</body>
+</html>
